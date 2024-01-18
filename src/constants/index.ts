@@ -3,7 +3,6 @@ export default {
   SKIP: 0,
   SORT: "asc",
 }
-
 export interface IPagination {
   limit: number
   skip: number
@@ -11,7 +10,6 @@ export interface IPagination {
   $or?: any
   search: any
 }
-
 export interface IResponse {
   success: boolean
   msg: string
