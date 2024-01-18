@@ -1,18 +1,18 @@
-import mongoose, { ConnectOptions } from "mongoose"
+import mongoose, { ConnectOptions } from "mongoose";
 
 const connectToDatabase = async () => {
-  mongoose.set("strictQuery", false)
+  mongoose.set("strictQuery", false);
 
   mongoose.connect(`${process.env.MONGO_URL!}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-  } as ConnectOptions)
+  } as ConnectOptions);
 
   const conn = mongoose.connection.on("connected", () => {
-    console.log("Database Connected")
-  })
+    console.log("Database Connected");
+  });
 
-  return { conn }
-}
+  return { conn };
+};
 
-export default connectToDatabase
+export default connectToDatabase;
